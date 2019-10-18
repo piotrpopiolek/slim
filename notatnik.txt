@@ -1,1 +1,6 @@
 https://github.com/jeroenweustink/slim-rest-api
+
+
+https://www.udemy.com/course/symfony-api-platform-reactjs-full-stack-masterclass/
+
+https://www.youtube.com/channel/UCrSxel4Mheo6XA8IPMA-3ZQ/videos

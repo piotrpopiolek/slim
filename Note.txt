@@ -1,0 +1,36 @@
+public function newAction(Request $request)
+    {
+        $data = json_decode($request->getContent(), true);
+
+        $programmer = new Programmer($data['nickname'], $data['avatarNumber']);
+        $programmer->tagLine = $data['tagLine'];
+        $programmer->userId = $this->findUserByUsername('weaverryan')->id;
+
+        $this->save($programmer);
+
+        return new Response('It worked. Believe me - I\'m an API', 201);
+    }
+
+
+Statusy HTTP:
+201 - utworzenie elementu
+202 - akceptacja 
+204 - delete
+
+google: http status code
+
+Testy PHPUnit
+
+Behat do testowania równie¿ ogarn¹æ w przysz³oœci
+
+
+Metody HTTP:
+DELETE - 
+GET - Retrieving a representation
+POST - Creating resources
+PUT - Updating/Editing resources
+PATCH - 
+
+https://www.ibm.com/developerworks/library/x-slim-rest/index.html
+https://www.codediesel.com/php/create-a-quick-rest-api-using-slim-framework/
+
